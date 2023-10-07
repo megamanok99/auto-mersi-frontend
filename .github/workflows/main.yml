@@ -26,6 +26,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          remote-dir: ./auto-mersi.ru/htdocs/www/
+          remote-dir: auto-mersi.ru/htdocs/www/
 
         
