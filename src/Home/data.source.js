@@ -1,21 +1,22 @@
 import React from 'react';
 import a4 from './image/a4.jpg';
 import camry from './image/camry.jpg';
-import cor from './image/cor.jpg';
-import foc from './image/foc.jpg';
 import golf from './image/golf.png';
-import log from './image/log.png';
 import maz from './image/maz.png';
 import passport from './image/passport.png';
 import pts from './image/pts.png';
 import sts from './image/sts.png';
-import tig from './image/tig.jpg';
+
+import instagram from './image/instagram.png';
+import { Logotype } from './image/svgLogo';
+import telegram from './image/telegram.png';
+import whatsapp from './image/whatsapp.png';
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
   logo: {
     className: 'header0-logo',
-    children: log,
+    children: <Logotype />,
   },
   Menu: {
     className: 'header0-menu',
@@ -24,14 +25,31 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: 'ya.ru',
+          href: '#comment',
           children: [
             {
-              children: <div>8909(656 955)</div>,
+              children: <span>Контакты</span>,
+              name: 'link',
+            },
+          ],
+        },
+
+        subItem: [],
+      },
+
+      {
+        name: 'item0',
+        className: 'header0-item',
+        children: {
+          href: '',
+          children: [
+            {
+              children: <span>Контакты</span>,
               name: 'text',
             },
           ],
         },
+
         subItem: [],
       },
     ],
@@ -85,7 +103,7 @@ export const Banner50DataSource = {
         name: 'button',
         className: 'banner5-button-wrapper',
         children: {
-          href: '#',
+          href: '#Content11_0',
           className: 'banner5-button',
           type: 'primary',
           children: (
@@ -573,181 +591,7 @@ export const Pricing10DataSource = {
   },
   block: {
     className: 'pricing1-block-wrapper',
-    children: [
-      {
-        name: 'block0',
-        className: 'pricing1-block',
-        md: 8,
-        xs: 24,
-        children: {
-          wrapper: { className: 'pricing1-block-box ' },
-          topWrapper: { className: 'pricing1-top-wrapper' },
-          name: {
-            className: 'pricing1-name',
-            children: (
-              <span>
-                <img src={cor} style={{ width: 230, marginLeft: -10 }} />
-                <p>Цена выкупа:</p>
-              </span>
-            ),
-          },
-          money: {
-            className: 'pricing1-money',
-            children: (
-              <span>
-                <p>470 000 ₽</p>
-              </span>
-            ),
-          },
-          content: {
-            className: 'pricing1-content',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <span>
-                      <span>
-                        <span>
-                          <p>Марка и модель: Toyota Corolla</p>
-                          <p>Год выпуска: 2012</p>
-                          <p>Пробег: 90 000 км</p>
-                          <p>Состояние: Отличное</p>
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
-          line: { className: 'pricing1-line' },
-          buttonWrapper: {
-            className: 'pricing1-button-wrapper',
-            children: {
-              a: {
-                className: 'pricing1-button',
-                href: '#',
-                children: '免费试用',
-              },
-            },
-          },
-        },
-      },
-      {
-        name: 'block~lnej1on0tzl',
-        className: 'pricing1-block',
-        md: 8,
-        xs: 24,
-        children: {
-          wrapper: { className: 'pricing1-block-box ' },
-          topWrapper: { className: 'pricing1-top-wrapper' },
-          name: {
-            className: 'pricing1-name',
-            children: (
-              <span>
-                <img src={foc} style={{ width: 230, marginLeft: -10 }} />
-                <p>Цена выкупа</p>
-              </span>
-            ),
-          },
-          money: {
-            className: 'pricing1-money',
-            children: (
-              <span>
-                <p>530 000 ₽</p>
-              </span>
-            ),
-          },
-          content: {
-            className: 'pricing1-content',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <span>
-                      <span>
-                        <p>Марка и модель: Ford Focus</p>
-                        <p>Год выпуска: 2015</p>
-                        <p>Пробег: 60 000 км</p>
-                        <p>Состояние: Хорошее</p>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
-          line: { className: 'pricing1-line' },
-          buttonWrapper: {
-            className: 'pricing1-button-wrapper',
-            children: {
-              a: {
-                className: 'pricing1-button lnej2yg0c5-editor_css',
-                href: '#',
-                children: '立即购买',
-              },
-            },
-          },
-        },
-      },
-      {
-        name: 'block~lnej1xhxt3b',
-        className: 'pricing1-block lnej201r67-editor_css',
-        md: 8,
-        xs: 24,
-        children: {
-          wrapper: { className: 'pricing1-block-box ' },
-          topWrapper: { className: 'pricing1-top-wrapper' },
-          name: {
-            className: 'pricing1-name',
-            children: (
-              <span>
-                <img src={tig} style={{ width: 230, marginLeft: -10 }} />
-                <p>Цена выкупа</p>
-              </span>
-            ),
-          },
-          money: {
-            className: 'pricing1-money',
-            children: (
-              <span>
-                <span>
-                  <p>&nbsp;950 000 ₽</p>
-                </span>
-              </span>
-            ),
-          },
-          content: {
-            className: 'pricing1-content',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <span>
-                      <p>Марка и модель: Volkswagen Tiguan</p>
-                      <p>Год выпуска: 2018</p>
-                      <p>Пробег: 30 000 км</p>
-                      <p>Состояние: Отличное</p>
-                    </span>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
-          line: { className: 'pricing1-line' },
-          buttonWrapper: {
-            className: 'pricing1-button-wrapper',
-            children: {
-              a: {
-                className: 'pricing1-button lnej2qgw5xl-editor_css',
-                href: '#',
-                children: '立即购买',
-              },
-            },
-          },
-        },
-      },
-    ],
+    children: [],
   },
 };
 export const Feature11DataSource = {
@@ -883,18 +727,17 @@ export const Content110DataSource = {
     children: [
       {
         name: 'image',
-        children: 'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
+        children: '',
         className: 'title-image',
       },
-      { name: 'title', children: 'Название компании', className: 'title-h1' },
       {
-        name: 'content',
-        children: 'еще не придумал',
-        className: 'title-content',
+        name: 'title',
+        children: 'Оставьте заявку на выкуп авто прямо сейчас!',
+        className: 'title-h1',
       },
       {
-        name: 'content2',
-        children: 'еще не придумал 2',
+        name: 'content',
+        children: 'Заполните форму ниже, и наши эксперты свяжутся с вами в кратчайшие сроки',
         className: 'title-content',
       },
     ],
@@ -904,7 +747,7 @@ export const Content110DataSource = {
     children: {
       a: {
         className: 'button',
-        href: '#',
+        href: '#Content11_0',
         children: (
           <span>
             <p>Оставить заявку</p>
@@ -928,7 +771,7 @@ export const Footer10DataSource = {
         className: 'block',
         title: {
           className: 'logo',
-          children: <img src={log} />,
+          children: <Logotype />,
         },
         childWrapper: {
           className: 'slogan',
@@ -960,7 +803,7 @@ export const Footer10DataSource = {
           children: [
             {
               name: 'link0',
-              href: '#',
+              href: '#Feature7_0',
               children: (
                 <span>
                   <p>о нас</p>
@@ -969,7 +812,7 @@ export const Footer10DataSource = {
             },
             {
               name: 'link1',
-              href: '#',
+              href: '#Content0_0',
               children: (
                 <span>
                   <span>
@@ -978,18 +821,10 @@ export const Footer10DataSource = {
                 </span>
               ),
             },
-            {
-              name: 'link2',
-              href: '#',
-              children: (
-                <span>
-                  <p>крайние сделки</p>
-                </span>
-              ),
-            },
+
             {
               name: 'link3',
-              href: '#',
+              href: '#comment',
               children: (
                 <span>
                   <p>отызывы клиентов</p>
@@ -1018,7 +853,7 @@ export const Footer10DataSource = {
               name: 'link0',
               children: (
                 <span>
-                  <p>Инстаграмм</p>
+                  <img src={instagram} />
                 </span>
               ),
             },
@@ -1027,7 +862,16 @@ export const Footer10DataSource = {
               name: 'link1',
               children: (
                 <span>
-                  <p>вконтакте</p>
+                  <img src={telegram} />
+                </span>
+              ),
+            },
+            {
+              href: '#',
+              name: 'link1',
+              children: (
+                <span>
+                  <img src={whatsapp} />
                 </span>
               ),
             },

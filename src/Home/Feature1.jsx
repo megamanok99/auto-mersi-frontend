@@ -1,8 +1,8 @@
-import React from 'react';
+import { Col, Row } from 'antd';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
-import { Row, Col } from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import TweenOne from 'rc-tween-one';
+import React from 'react';
 
 function Content1(props) {
   const { ...tagProps } = props;
@@ -29,7 +29,7 @@ function Content1(props) {
     <div {...tagProps} {...dataSource.wrapper}>
       <OverPack {...dataSource.OverPack} component={Row}>
         <TweenOne
-          key="img"
+          key='img'
           animation={animType.one}
           resetStyle
           {...dataSource.imgWrapper}
@@ -37,14 +37,13 @@ function Content1(props) {
           componentProps={{
             md: dataSource.imgWrapper.md,
             xs: dataSource.imgWrapper.xs,
-          }}
-        >
+          }}>
           <span {...dataSource.img}>
-            <img src={dataSource.img.children} width="100%" alt="img" />
+            <img src={dataSource.img.children} width='100%' alt='img' />
           </span>
         </TweenOne>
         <QueueAnim
-          key="text"
+          key='text'
           type={animType.queue}
           leaveReverse
           ease={['easeOutQuad', 'easeInQuad']}
@@ -53,12 +52,11 @@ function Content1(props) {
           componentProps={{
             md: dataSource.textWrapper.md,
             xs: dataSource.textWrapper.xs,
-          }}
-        >
-          <h2 key="h1" {...dataSource.title}>
+          }}>
+          <h2 key='h1' {...dataSource.title}>
             {dataSource.title.children}
           </h2>
-          <div key="p" {...dataSource.content}>
+          <div key='p' {...dataSource.content}>
             {dataSource.content.children}
           </div>
         </QueueAnim>

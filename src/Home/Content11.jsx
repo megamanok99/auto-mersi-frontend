@@ -1,8 +1,8 @@
-import React from 'react';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import TweenOne from 'rc-tween-one';
-import { Button } from 'antd';
+import React from 'react';
+import MyForm from './Form';
 import { getChildrenToRender } from './utils';
 
 class Content11 extends React.PureComponent {
@@ -14,23 +14,28 @@ class Content11 extends React.PureComponent {
     return (
       <OverPack {...props} {...dataSource.OverPack}>
         <QueueAnim
-          type="bottom"
+          type='bottom'
           leaveReverse
-          key="page"
+          key='page'
           delay={[0, 100]}
-          {...dataSource.titleWrapper}
-        >
+          {...dataSource.titleWrapper}>
           {dataSource.titleWrapper.children.map(getChildrenToRender)}
         </QueueAnim>
         <TweenOne
-          key="button"
+          key='button'
           style={{ textAlign: 'center' }}
           {...dataSource.button}
-          animation={{ y: 30, opacity: 0, type: 'from', delay: 300 }}
-        >
-          <Button {...dataSource.button.children.a}>
+          animation={{ y: 30, opacity: 0, type: 'from', delay: 300 }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <MyForm />
+          </div>
+          {/* <Button
+            onClick={() => {
+              onFinish();
+            }}
+            {...dataSource.button.children.a}>
             {dataSource.button.children.a.children}
-          </Button>
+          </Button> */}
         </TweenOne>
       </OverPack>
     );

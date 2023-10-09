@@ -11,7 +11,6 @@ import Feature2 from './Feature2';
 import Feature7 from './Feature7';
 import Footer1 from './Footer1';
 import Nav0 from './Nav0';
-import Pricing1 from './Pricing1';
 
 import {
   Banner50DataSource,
@@ -24,7 +23,6 @@ import {
   Feature70DataSource,
   Footer10DataSource,
   Nav00DataSource,
-  Pricing10DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -85,14 +83,17 @@ export default class Home extends React.Component {
           dataSource={Feature70DataSource}
           isMobile={this.state.isMobile}
         />
-
-        <Pricing1
-          id='Pricing1_0'
-          key='Pricing1_0'
-          dataSource={Pricing10DataSource}
-          isMobile={this.state.isMobile}
-        />
-
+        <div
+          class='pricing1-title-wrapper'
+          style={{
+            textAlign: 'center',
+          }}>
+          <h1 name='title' class='pricing1-title-h1' id='comment'>
+            <span>
+              <p>Отзывы клиентов</p>
+            </span>
+          </h1>
+        </div>
         <Feature1
           id='Feature1_1'
           key='Feature1_1'
