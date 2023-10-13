@@ -32,6 +32,7 @@ const MyForm = () => {
   return (
     <SpinFC spinning={isFetching}>
       <Form form={form} className='form' layout='vertical' onFinish={onFinish}>
+        <div class='g-recaptcha' data-sitekey='6LcKWpsoAAAAALWcqwNOSgJKYYXL3zLnQ96eGh5W'></div>
         <Form.Item
           label='Укажите Фамилию имя и отчество'
           name='fullName'
