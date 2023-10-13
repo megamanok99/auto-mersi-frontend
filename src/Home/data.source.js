@@ -25,32 +25,76 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: '#comment',
+          href: '#Content11_0',
           children: [
             {
-              children: <span>Контакты</span>,
+              children: <span>Оставить заявку</span>,
+              name: 'text',
+            },
+          ],
+        },
+      },
+      {
+        name: 'item1',
+        className: 'header0-item',
+        children: {
+          href: '#Feature7_0',
+          children: [
+            {
+              children: <span>О нас</span>,
               name: 'link',
             },
           ],
         },
-
-        subItem: [],
       },
 
       {
-        name: 'item0',
+        name: 'item2',
+        className: 'header0-item',
+        children: {
+          href: '#comment',
+          children: [
+            {
+              children: <span>Отзывы</span>,
+              name: 'text',
+            },
+          ],
+        },
+      },
+
+      {
+        name: 'item3',
         className: 'header0-item',
         children: {
           href: '',
           children: [
             {
-              children: <span>Контакты</span>,
+              children: (
+                <a target='_blank' href='https://instagram.com/auto.mersi'>
+                  <img width={30} src={instagram} />
+                </a>
+              ),
               name: 'text',
             },
           ],
         },
-
-        subItem: [],
+      },
+      {
+        name: 'item4',
+        className: 'header0-item',
+        children: {
+          href: '',
+          children: [
+            {
+              children: (
+                <a target='_blank' href='https://t.me/auto_mersi'>
+                  <img width={30} src={telegram} />
+                </a>
+              ),
+              name: 'text',
+            },
+          ],
+        },
       },
     ],
   },
@@ -699,9 +743,9 @@ export const Feature21DataSource = {
     className: 'content2-title',
     children: (
       <span>
-        <p>Audi A4 </p>
-        <p>2017 год</p>
-        <p> пробег 45 000 км</p>
+        <p>Ford Focus </p>
+        <p>2015 год</p>
+        <p> пробег 75 000 км</p>
       </span>
     ),
   },
@@ -710,7 +754,7 @@ export const Feature21DataSource = {
     children: (
       <span>
         <p>
-          Продал свою Audi A4 через эту компанию. Оперативный процесс выкупа и приемлемая цена
+          Продал свою Ford Focus через эту компанию. Оперативный процесс выкупа и приемлемая цена
           приятно удивили. Весь процесс был четким и профессиональным.
         </p>
       </span>
@@ -849,7 +893,7 @@ export const Footer10DataSource = {
         childWrapper: {
           children: [
             {
-              href: '#',
+              href: 'https://instagram.com/auto.mersi',
               name: 'link0',
               children: (
                 <span>
@@ -858,7 +902,7 @@ export const Footer10DataSource = {
               ),
             },
             {
-              href: '#',
+              href: 'https://t.me/auto_mersi',
               name: 'link1',
               children: (
                 <span>
@@ -897,7 +941,7 @@ export const Footer10DataSource = {
               name: 'link0',
               children: (
                 <span>
-                  <p>8 (909)-646 8444</p>
+                  <p>+7 (903) 747-41-56</p>
                 </span>
               ),
             },
@@ -906,7 +950,7 @@ export const Footer10DataSource = {
               name: 'link1',
               children: (
                 <span>
-                  <p>г.Ногинск ,</p>
+                  <p>Москва, Московская область</p>
                 </span>
               ),
             },

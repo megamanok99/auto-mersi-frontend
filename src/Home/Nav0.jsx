@@ -10,11 +10,14 @@ class Header extends React.Component {
     super(props);
     this.state = {
       phoneOpen: undefined,
+      heightMenu: 0,
     };
   }
 
   phoneClick = () => {
     const phoneOpen = !this.state.phoneOpen;
+    console.log(phoneOpen, this.state.heightMenu);
+    this.setState({ heightMenu: phoneOpen ? 140 : 0 });
     this.setState({
       phoneOpen,
     });
@@ -22,7 +25,7 @@ class Header extends React.Component {
 
   render() {
     const { dataSource, isMobile, ...props } = this.props;
-    const { phoneOpen } = this.state;
+    const { phoneOpen, heightMenu } = this.state;
     const navData = dataSource.Menu.children;
     const navChildren = navData.map((item) => {
       const { children: a, subItem, ...itemProps } = item;
@@ -36,7 +39,7 @@ class Header extends React.Component {
                 {a.children.map(getChildrenToRender)}
               </div>
             }
-            popupClassName='header0-item-child'>
+            popupClassName='header0-item-child '>
             {subItem.map(($item, ii) => {
               const { children: childItem } = $item;
               const child = childItem.href ? (
@@ -62,6 +65,7 @@ class Header extends React.Component {
       );
     });
     const moment = phoneOpen === undefined ? 300 : null;
+
     return (
       <TweenOne
         component='header'
@@ -74,7 +78,7 @@ class Header extends React.Component {
           <TweenOne animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }} {...dataSource.logo}>
             {dataSource.logo.children}
           </TweenOne>
-          {/* {isMobile && (
+          {isMobile && (
             <div
               {...dataSource.mobileMenu}
               onClick={() => {
@@ -84,28 +88,28 @@ class Header extends React.Component {
               <em />
               <em />
             </div>
-          )} */}
+          )}
           <TweenOne
             {...dataSource.Menu}
-            animation={
-              isMobile
-                ? {
-                    height: 0,
-                    duration: 300,
-                    onComplete: (e) => {
-                      if (this.state.phoneOpen) {
-                        e.target.style.height = 'auto';
-                      }
-                    },
-                    ease: 'easeInOutQuad',
-                  }
-                : null
-            }
+            animation={{
+              height: heightMenu,
+              duration: 0,
+              // style: {
+              //   height: heightMenu,
+              // },
+              onComplete: (e) => {
+                if (this.state.phoneOpen) {
+                  e.vars.style.height = 'auto';
+                }
+              },
+              ease: 'easeInOutQuad',
+            }}
             moment={moment}
             reverse={!!phoneOpen}>
             <Menu
+              onClick={() => {}}
               mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['sub0']}
+              // defaultSelectedKeys={['sub0']}
               theme='dark'>
               {navChildren}
             </Menu>

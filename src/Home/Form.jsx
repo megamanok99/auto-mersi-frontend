@@ -15,10 +15,6 @@ const MyForm = () => {
         'Content-Type': 'application/json', // Устанавливаем заголовок Content-Type
       },
       body: JSON.stringify({
-        user: 'sale@auto-mersi.ru',
-        pass: 'heetsSlateSelection',
-        from: 'sale@auto-mersi.ru',
-        to: 'akb-noginsk@yandex.ru',
         subject: 'заявка с auto-mersi.ru',
         text: `заявка от ${values?.fullName} на продажу машины ${values?.carModel} ${values?.carYear} года.\n Гос номер : ${values?.licensePlate}.\nпробег:${values?.mileage}.\nЖелаемая сумма: ${values?.desiredAmount}.\nКонтактные данные заказчика: ${values?.phone} `,
       }), // Преобразуем объект в JSON и передаем как тело запроса
@@ -36,7 +32,7 @@ const MyForm = () => {
 
   return (
     <SpinFC spinning={isFetching}>
-      <Form form={form} style={{ width: 500 }} layout='vertical' onFinish={onFinish}>
+      <Form form={form} className='form' layout='vertical' onFinish={onFinish}>
         <Form.Item
           label='Укажите Фамилию имя и отчество'
           name='fullName'
