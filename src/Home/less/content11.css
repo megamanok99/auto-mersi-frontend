@@ -42,13 +42,7 @@
   .content11-wrapper {
     height: 1063px;
   }
-  .content11-wrapper .form {
+  .form {
     width: auto !important;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .content11-wrapper .form {
-    width: 300px;
   }
 }

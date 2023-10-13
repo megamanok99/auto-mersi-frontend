@@ -19,7 +19,6 @@ const MyForm = () => {
         text: `заявка от ${values?.fullName} на продажу машины ${values?.carModel} ${values?.carYear} года.\n Гос номер : ${values?.licensePlate}.\nпробег:${values?.mileage}.\nЖелаемая сумма: ${values?.desiredAmount}.\nКонтактные данные заказчика: ${values?.phone} `,
       }), // Преобразуем объект в JSON и передаем как тело запроса
     })
-      .then((response) => response.json()) // Распарсим ответ в JSON
       .then((data) => {
         message.success('Заявка отправлена');
         setIsFetching(false);
