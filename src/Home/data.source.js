@@ -28,7 +28,7 @@ export const Nav00DataSource = {
           href: '#Content11_0',
           children: [
             {
-              children: <span>Оставить заявку</span>,
+              children: <span>Продать автомобиль</span>,
               name: 'text',
             },
           ],
@@ -153,7 +153,7 @@ export const Banner50DataSource = {
           children: (
             <span>
               <span>
-                <p>оставить заявку</p>
+                <p>Продать автомобиль</p>
               </span>
             </span>
           ),
@@ -794,7 +794,7 @@ export const Content110DataSource = {
         href: '#Content11_0',
         children: (
           <span>
-            <p>Оставить заявку</p>
+            <p>Продать автомобиль</p>
           </span>
         ),
       },

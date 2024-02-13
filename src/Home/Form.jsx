@@ -101,7 +101,7 @@ const MyForm = () => {
           </Form.Item>
           <Form.Item>
             <Button className='button' htmlType='submit'>
-              Отправить заявку
+              Продать автомобиль
             </Button>
           </Form.Item>
         </Form>
