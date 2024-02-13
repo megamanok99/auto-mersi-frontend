@@ -1,5 +1,5 @@
 .content11-wrapper {
-  height: 980px;
+  height: auto;
   background: url('../image/last.svg') no-repeat bottom;
   background-size: cover;
   background-size: 100%;
@@ -40,7 +40,7 @@
 }
 @media screen and (max-width: 767px) {
   .content11-wrapper {
-    height: 1063px;
+    height: auto;
   }
   .form {
     width: auto !important;
