@@ -7,7 +7,6 @@ import passport from './image/passport.png';
 import pts from './image/pts.png';
 import sts from './image/sts.png';
 
-import instagram from './image/instagram.png';
 import { Logotype } from './image/svgLogo';
 import telegram from './image/telegram.png';
 import whatsapp from './image/whatsapp.png';
@@ -62,23 +61,23 @@ export const Nav00DataSource = {
         },
       },
 
-      {
-        name: 'item3',
-        className: 'header0-item',
-        children: {
-          href: '',
-          children: [
-            {
-              children: (
-                <a target='_blank' href='https://instagram.com/auto.mersi'>
-                  <img width={30} src={instagram} />
-                </a>
-              ),
-              name: 'text',
-            },
-          ],
-        },
-      },
+      // {
+      //   name: 'item3',
+      //   className: 'header0-item',
+      //   children: {
+      //     href: '',
+      //     children: [
+      //       {
+      //         children: (
+      //           <a target='_blank' href='https://instagram.com/auto.mersi'>
+      //             <img width={30} src={instagram} />
+      //           </a>
+      //         ),
+      //         name: 'text',
+      //       },
+      //     ],
+      //   },
+      // },
       {
         name: 'item4',
         className: 'header0-item',
@@ -850,7 +849,7 @@ export const Footer10DataSource = {
               href: '#Feature7_0',
               children: (
                 <span>
-                  <p>о нас</p>
+                  <p>О нас</p>
                 </span>
               ),
             },
@@ -860,7 +859,7 @@ export const Footer10DataSource = {
               children: (
                 <span>
                   <span>
-                    <p>Необходимы документы</p>
+                    <p>Необходимые документы</p>
                   </span>
                 </span>
               ),
@@ -871,7 +870,7 @@ export const Footer10DataSource = {
               href: '#comment',
               children: (
                 <span>
-                  <p>отызывы клиентов</p>
+                  <p>Отзывы клиентов</p>
                 </span>
               ),
             },
@@ -892,15 +891,15 @@ export const Footer10DataSource = {
         },
         childWrapper: {
           children: [
-            {
-              href: 'https://instagram.com/auto.mersi',
-              name: 'link0',
-              children: (
-                <span>
-                  <img src={instagram} />
-                </span>
-              ),
-            },
+            // {
+            //   href: 'https://instagram.com/auto.mersi',
+            //   name: 'link0',
+            //   children: (
+            //     <span>
+            //       <img src={instagram} />
+            //     </span>
+            //   ),
+            // },
             {
               href: 'https://t.me/auto_mersi',
               name: 'link1',
